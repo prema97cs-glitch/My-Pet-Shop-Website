@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rottweiler - Full Details | Paws & Love</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .details-page { padding: 40px 5%; max-width: 1000px; margin: 40px auto; background: white; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+        .back-btn { margin-bottom: 20px; display: inline-block; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+        .breed-img { width: 100%; border-radius: 20px; box-shadow: var(--shadow); object-fit: cover; }
+        .price-tag { background: var(--secondary); padding: 15px 25px; border-radius: 15px; margin: 20px 0; color: var(--dark); font-weight: 700; font-size: 1.2rem; }
+        .info-card { background: #fafafa; padding: 25px; border-radius: 20px; margin-top: 30px; border-left: 6px solid var(--primary); }
+        .bottom-card { margin-top: -15px; }
+        .features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .health-badge { background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        @media (max-width: 768px) { .details-grid { grid-template-columns: 1fr; } .bottom-card { margin-top: 30px; } }
+    </style>
+</head>
+<body>
+
+    <section class="details-page">
+        <a href="../index.html" class="btn back-btn">← Back to Home</a>
+        
+        <div class="details-grid">
+            <img src="https://cdn.britannica.com/69/234469-050-B883797B/Rottweiler-dog.jpg" alt="Rottweiler" class="breed-img">
+            
+            <div class="main-info">
+                <span class="health-badge">✔️ Vaccinated</span>
+                <h1>Rottweiler</h1>
+                <p><strong>Origin:</strong> Germany</p>
+                <div class="price-tag">Price: ₹30,000 – ₹80,000</div>
+                
+                <p><strong>Category:</strong> Guard Dog</p>
+                <p><strong>Traits:</strong> Strong, Protective, Confident</p>
+                
+                <div class="info-card">
+                    <h4>⭐ Special Features</h4>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>One of the most powerful and effective security dogs</li>
+                        <li>Intense loyalty and devotion to their family</li>
+                        <li>Natural protective instincts and very courageous</li>
+                        <li>Extremely calm and steady when properly trained</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-list">
+            <div class="info-card bottom-card">
+                <h4>📏 Physical Details</h4>
+                <p><strong>Size:</strong> Large and Muscular</p>
+                <p><strong>Coat:</strong> Short, black with clearly defined tan markings</p>
+            </div>
+            <div class="info-card bottom-card">
+                <h4>🏡 Care & Maintenance</h4>
+                <p>Needs early socialization and firm training</p>
+                <p>Requires daily physical and mental exercise</p>
+                <p>Low maintenance coat; weekly brushing is enough</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h4>🍖 Recommended Food</h4>
+            <p>Needs a high-quality diet to support large muscle mass:</p>
+            <ul style="margin: 10px 0 10px 20px;">
+                <li>Protein-rich premium dry kibble</li>
+                <li>Boiled meat and eggs</li>
+                <li>Calcium and joint supplements for bone health</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: var(--secondary); border-radius: 20px;">
+            <h3>❤️ Why Choose a Rottweiler?</h3>
+            <p>The Rottweiler is a world-class guardian. If you are looking for a powerful, intelligent, and deeply loyal protector for your home and family, the "Rottie" is a perfect choice.</p>
+            <br>
+            <a href="../index.html#contact" class="btn">Inquire About Adoption</a>
+        </div>
+    </section>
+
+</body>
+</html>

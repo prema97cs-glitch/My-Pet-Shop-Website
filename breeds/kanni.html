@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanni Dog - Full Details | Paws & Love</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .details-page { 
+            padding: 40px 5%; 
+            max-width: 1000px; 
+            margin: 40px auto; 
+            background: white; 
+            border-radius: 30px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
+        }
+        
+        .back-btn { margin-bottom: 20px; display: inline-block; }
+
+        .details-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 40px; 
+            /* FIX 1: Prevent stretching. This lets cards have different heights. */
+            align-items: start; 
+            /* --- */
+        }
+
+        .breed-img { 
+            width: 100%; 
+            border-radius: 20px; 
+            box-shadow: var(--shadow);
+            object-fit: cover;
+        }
+
+        .price-tag { 
+            background: var(--secondary); 
+            padding: 15px 25px; 
+            border-radius: 15px; 
+            margin: 20px 0; 
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .info-card { 
+            background: #fafafa; 
+            padding: 25px; 
+            border-radius: 20px; 
+            margin-top: 30px;
+            border-left: 6px solid var(--primary);
+        }
+
+        /* FIX 2: Apply a small negative margin to pull the bottom cards UP. */
+        .bottom-card {
+            margin-top: -15px; /* Adjust this number to tweak the gap */
+        }
+        /* --- */
+
+        .features-list { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px; 
+            margin-top: 20px;
+        }
+
+        .feature-item { 
+            background: #fff; 
+            padding: 10px 15px; 
+            border-radius: 10px; 
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .food-warning { 
+            background: #fff0f0; 
+            color: #d32f2f; 
+            padding: 15px; 
+            border-radius: 15px; 
+            margin-top: 15px; 
+        }
+
+        .health-badge {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .details-grid { grid-template-columns: 1fr; }
+            /* Turn off the negative margin on mobile so they stack normally */
+            .bottom-card { margin-top: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="details-page">
+        <a href="../index.html" class="btn back-btn">← Back to Home</a>
+        
+        <div class="details-grid">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Kanni.jpg" alt="Kanni Dog" class="breed-img">
+            <div class="main-info">
+                <span class="health-badge">✔️ Vaccinated</span>
+                <h1>Kanni Dog</h1>
+                <p><strong>Origin:</strong> Tamil Nadu, India</p>
+                <div class="price-tag">Price: ₹12,000 – ₹25,000</div>
+                
+                <p><strong>Category:</strong> Guard Dog / Hunting Dog</p>
+                <p><strong>Best For:</strong> Farm houses, Open spaces, Security</p>
+                
+                <div class="info-card">
+                    <h4>⭐ Special Features</h4>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Strong protective instinct for guarding</li>
+                        <li>High-speed runner (traditionally used for hunting)</li>
+                        <li>One-person dog: Extremely loyal to the owner</li>
+                        <li>High natural immunity to local diseases</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-list">
+            <div class="info-card bottom-card">
+                <h4>📏 Physical Details</h4>
+                <p><strong>Height:</strong> 25 – 30 inches</p>
+                <p><strong>Weight:</strong> 16 – 22 kg</p>
+                <p><strong>Lifespan:</strong> 10 – 12 years</p>
+            </div>
+            <div class="info-card bottom-card">
+                <h4>🏡 Care & Maintenance</h4>
+                <p>Needs daily exercise (very active)</p>
+                <p>Best suited for outdoor/open living</p>
+                <p>Minimal grooming needed</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h4>🍖 Recommended Food</h4>
+            <p>A high-protein diet is essential for this active breed:</p>
+            <ul style="margin: 10px 0 10px 20px;">
+                <li>Boiled chicken & Eggs</li>
+                <li>Rice & Broth</li>
+                <li>Quality dry dog food</li>
+            </ul>
+            <div class="food-warning">
+                <strong>⚠️ Avoid:</strong> Spicy food, Oily food, and Excess salt.
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h4>🏥 Health & Vaccination</h4>
+            <p>Basic vaccinations are already completed. Regular boosters required for:</p>
+            <p><em>Rabies, Parvo, and Distemper.</em></p>
+            <p>Strong natural immunity, but regular vet check-ups are recommended to keep them in peak shape.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: var(--secondary); border-radius: 20px;">
+            <h3>❤️ Why Choose Kanni Dog?</h3>
+            <p>Kanni is the perfect choice for a loyal, intelligent, and low-maintenance guard dog. Its speed and bravery make it a legendary Indian breed.</p>
+            <br>
+            <a href="../index.html#contact" class="btn">Inquire About Adoption</a>
+        </div>
+    </section>
+
+</body>
+</html>

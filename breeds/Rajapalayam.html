@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajapalayam Dog - Full Details | Paws & Love</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .details-page { 
+            padding: 40px 5%; 
+            max-width: 1000px; 
+            margin: 40px auto; 
+            background: white; 
+            border-radius: 30px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
+        }
+        
+        .back-btn { margin-bottom: 20px; display: inline-block; }
+
+        .details-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 40px; 
+            align-items: start; 
+        }
+
+        .breed-img { 
+            width: 100%; 
+            border-radius: 20px; 
+            box-shadow: var(--shadow);
+            object-fit: cover;
+        }
+
+        .price-tag { 
+            background: var(--secondary); 
+            padding: 15px 25px; 
+            border-radius: 15px; 
+            margin: 20px 0; 
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .info-card { 
+            background: #fafafa; 
+            padding: 25px; 
+            border-radius: 20px; 
+            margin-top: 30px;
+            border-left: 6px solid var(--primary);
+        }
+
+        .bottom-card {
+            margin-top: -15px; 
+        }
+
+        .features-list { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px; 
+            margin-top: 20px;
+        }
+
+        .food-warning { 
+            background: #fff0f0; 
+            color: #d32f2f; 
+            padding: 15px; 
+            border-radius: 15px; 
+            margin-top: 15px; 
+        }
+
+        .health-badge {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .details-grid { grid-template-columns: 1fr; }
+            .bottom-card { margin-top: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="details-page">
+        <a href="../index.html" class="btn back-btn">← Back to Home</a>
+        
+        <div class="details-grid">
+            <img src="https://i.pinimg.com/474x/ec/17/21/ec172157148002a9f0edb4679e9aab8d.jpg" alt="Rajapalayam Dog" class="breed-img">
+            
+            <div class="main-info">
+                <span class="health-badge">✔️ Vaccinated</span>
+                <h1>Rajapalayam Dog</h1>
+                <p><strong>Origin:</strong> Tamil Nadu, India</p>
+                <div class="price-tag">Price: ₹15,000 – ₹30,000</div>
+                
+                <p><strong>Category:</strong> Guard Dog</p>
+                <p><strong>Best For:</strong> Security, Farm houses</p>
+                
+                <div class="info-card">
+                    <h4>⭐ Special Features</h4>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>One of the best guard dogs in India</li>
+                        <li>Highly territorial and protective nature</li>
+                        <li>Strong muscular body with a majestic white coat</li>
+                        <li>Extremely brave and loyal to the family</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-list">
+            <div class="info-card bottom-card">
+                <h4>📏 Physical Details</h4>
+                <p><strong>Height:</strong> 25 – 30 inches</p>
+                <p><strong>Weight:</strong> 18 – 25 kg</p>
+                <p><strong>Lifespan:</strong> 10 – 12 years</p>
+            </div>
+            <div class="info-card bottom-card">
+                <h4>🏡 Care & Maintenance</h4>
+                <p>Needs plenty of space to roam</p>
+                <p>Daily exercise is mandatory</p>
+                <p>Low grooming requirements</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h4>🍖 Recommended Food</h4>
+            <p>A balanced diet for a large guard dog:</p>
+            <ul style="margin: 10px 0 10px 20px;">
+                <li>Chicken & Mutton</li>
+                <li>Rice & Eggs</li>
+                <li>High-quality protein sources</li>
+            </ul>
+            <div class="food-warning">
+                <strong>⚠️ Avoid:</strong> Oily and spicy food.
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h4>🏥 Health & Vaccination</h4>
+            <p>Basic vaccinations are completed. Ensure regular follow-ups for:</p>
+            <p><em>Rabies, Parvo, and Distemper.</em></p>
+            <p>Known for their stamina, but require regular check-ups to maintain bone health.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: var(--secondary); border-radius: 20px;">
+            <h3>❤️ Why Choose Rajapalayam?</h3>
+            <p>The Rajapalayam is a symbol of Indian pride—brave, strong, and a superior guardian for your home and farm.</p>
+            <br>
+            <a href="../index.html#contact" class="btn">Inquire About Adoption</a>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shih Tzu - Full Details | Paws & Love</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .details-page { padding: 40px 5%; max-width: 1000px; margin: 40px auto; background: white; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+        .back-btn { margin-bottom: 20px; display: inline-block; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+        .breed-img { width: 100%; border-radius: 20px; box-shadow: var(--shadow); object-fit: cover; }
+        .price-tag { background: var(--secondary); padding: 15px 25px; border-radius: 15px; margin: 20px 0; color: var(--dark); font-weight: 700; font-size: 1.2rem; }
+        .info-card { background: #fafafa; padding: 25px; border-radius: 20px; margin-top: 30px; border-left: 6px solid var(--primary); }
+        .bottom-card { margin-top: -15px; }
+        .features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .health-badge { background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        @media (max-width: 768px) { .details-grid { grid-template-columns: 1fr; } .bottom-card { margin-top: 30px; } }
+    </style>
+</head>
+<body>
+    <section class="details-page">
+        <a href="../index.html" class="btn back-btn">← Back to Home</a>
+        <div class="details-grid">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFoASEPfS5MmEXYBBgh6DUTCnmF1oFORfEsA&s" alt="Shih Tzu" class="breed-img">
+            <div class="main-info">
+                <span class="health-badge">✔️ Vaccinated</span>
+                <h1>Shih Tzu</h1>
+                <p><strong>Origin:</strong> Tibet / China</p>
+                <div class="price-tag">Price: ₹20,000 – ₹60,000</div>
+                <p><strong>Category:</strong> Toy Dog</p>
+                <p><strong>Traits:</strong> Cute, Friendly, Affectionate</p>
+                <div class="info-card">
+                    <h4>⭐ Special Features</h4>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>The perfect indoor lap dog for apartments</li>
+                        <li>Known for a very friendly and happy personality</li>
+                        <li>Minimal shedding (Hypoallergenic qualities)</li>
+                        <li>Loves human companionship and attention</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="features-list">
+            <div class="info-card bottom-card">
+                <h4>📏 Physical Details</h4>
+                <p><strong>Size:</strong> Small / Toy breed</p>
+                <p><strong>Weight:</strong> 4 – 7 kg</p>
+            </div>
+            <div class="info-card bottom-card">
+                <h4>🏡 Care & Maintenance</h4>
+                <p>Requires daily grooming for its long coat</p>
+                <p>Low exercise needs; perfect for indoor living</p>
+            </div>
+        </div>
+        <div class="info-card">
+            <h4>🍖 Recommended Food</h4>
+            <p>Balanced diet suitable for small breeds:</p>
+            <ul style="margin: 10px 0 10px 20px;">
+                <li>Small-kibble dry food for tiny jaws</li>
+                <li>Cooked vegetables and lean protein</li>
+            </ul>
+        </div>
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: var(--secondary); border-radius: 20px;">
+            <h3>❤️ Why Choose Shih Tzu?</h3>
+            <p>The Shih Tzu is a little lion with a big heart. If you want a charming, gentle companion that fits perfectly into a modern indoor lifestyle, this is the breed for you.</p>
+            <br>
+            <a href="../index.html#contact" class="btn">Inquire About Adoption</a>
+        </div>
+    </section>
+</body>
+</html>

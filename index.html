@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Love | Premium Pet Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  
+    <style>
+        
+:root {
+    --primary: #8d6e63;
+    --secondary: #d7ccc8;
+    --accent: #ff8a65;
+    --dark: #3e2723;
+    --light: #fafafa;
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(17, 17, 17, 0.986), rgba(41, 34, 34, 0.4)), 
+                url('https://static.vecteezy.com/system/resources/thumbnails/039/363/890/small/ai-generated-rescue-dog-volunteer-ai-generated-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(247, 239, 239);
+    padding: 0 20px;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+
+
+section { padding: 80px 8%; }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title h2 { font-size: 2.5rem; color: var(--dark); }
+.section-title span { color: var(--primary); }
+
+.breed-container {
+    margin-bottom: 60px;
+}
+.breed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: 0.4s;
+}
+
+.card:hover { transform: translateY(-10px); }
+
+.card-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-content { padding: 25px; }
+.card-content h3 { margin-bottom: 10px; }
+.card-content p { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
+.price { font-weight: 700; color: var(--primary); display: block; margin-bottom: 15px; }
+
+.offers-bg { background-color: var(--secondary); border-radius: 30px; padding: 40px; }
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.offer-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px dashed var(--primary);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    
+}
+.gallery-item {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #bbbbbb;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.gallery-item:hover img { transform: scale(1.3); }
+
+.testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.testi-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    font-style: italic;
+}
+.testi-card span {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-style: normal;
+    color: var(--primary);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.2rem; }
+    .contact-wrapper { grid-template-columns: 1fr; }
+    section { padding: 60px 5%; }
+}
+
+    </style>
+</head>
+<body>
+<nav class="luxury-nav">
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+    <ul class="nav-links nav-left">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#breeds">Breeds</a></li>
+        <li><a href="#offers">Offers</a></li>
+    </ul>
+
+    <div class="logo luxury-logo">
+        <span class="logo-icon">🐾</span>
+        <div class="logo-text">
+            <h3>Paws & Love</h3>
+            <p>Premium Pet Shop</p>
+        </div>
+    </div>
+
+    <ul class="nav-links nav-right">
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-btn">Book Now</a></li>
+    </ul>
+</nav>
+
+
+<section class="hero premium-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-tag">Trusted Pet Companions</span>
+        <h1>Find Your Perfect Companion With Love & Care</h1>
+        <p>
+            Healthy, happy, and trusted pets for your family. Discover premium care,
+            expert guidance, and lovable companions all in one place.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#breeds" class="hero-btn primary-btn">Explore Breeds</a>
+            <a href="#contact" class="hero-btn secondary-btn">Talk to Us</a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-box">
+                <h3>500+</h3>
+                <p>Happy Families</p>
+            </div>
+            <div class="stat-box">
+                <h3>50+</h3>
+                <p>Premium Breeds</p>
+            </div>
+            <div class="stat-box">
+                <h3>100%</h3>
+                <p>Trusted Support</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="breeds">
+        <div class="section-title">
+            <h2>Our <span>Available</span> Breeds</h2>
+        </div>
+
+        <div class="breed-container">
+            <h2>Indian Breeds</h2><br>
+            <div class="breed-grid">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/f7/1e/7e/f71e7e0ee905f3ad9d4187564cfd375d.jpg" alt="Kanni" class="card-img">
+                    <div class="card-content">
+                        <h3>Kanni</h3>
+                        <p>A loyal and agile sighthound breed from Tamil Nadu, known for its speed and grace.</p>
+                        <span class="price">₹15,000 - ₹25,000</span>
+                        <a href="breeds/kanni.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://s3.animalia.bio/pets/animals/photos/full/1x1/3tIYAXnrh2qzjJfCzhFXJ4TsPVcliTim0SdIWPAL.webp?id=f3465b5c459518f3587591049b902072" alt="Rajapalayam" class="card-img">
+                    <div class="card-content">
+                        <h3>Rajapalayam</h3>
+                        <p>The majestic "Poligar Hound". Pure white coat and pink nose, a true royal protector.</p>
+                        <span class="price">₹18,000 - ₹30,000</span>
+                        <a href="breeds/Rajapalayam.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://www.shutterstock.com/image-photo/chippiparai-breed-sighthound-tamil-nadu-600nw-2180199957.jpg" alt="Chippiparai" class="card-img">
+                    <div class="card-content">
+                        <h3>Chippiparai</h3>
+                        <p>Hardy and low-maintenance, these dogs are excellent for guard duties and hunting.</p>
+                        <span class="price">₹12,000 - ₹20,000</span>
+                        <a href="breeds/Chippiparai.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVsJ0Vsuxih5d_XdEXj46y0jLWnSCO6tfbMg&s" class="card-img">
+                    <div class="card-content">
+                        <h3>Kombai</h3>
+                        <p>Hardy and low-maintenance, these dogs are excellent for guard duties and hunting.</p>
+                        <span class="price">₹12,000 – ₹25,000</span>
+                        <a href="breeds/Kombai.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://img.freepik.com/premium-photo/gray-cane-corso-dog-sitting-ground-forest_163427-685.jpg?w=360" class="card-img">
+                    <div class="card-content">
+                        <h3>Bully Kutta</h3>
+                        <p>Hardy and low-maintenance, these dogs are excellent for guard duties and hunting.</p>
+                        <span class="price">₹60,000 – ₹2,00,000</span>
+                        <a href="breeds/Bullykutta.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Indian_Spitz_Dog.jpg" class="card-img">
+                    <div class="card-content">
+                        <h3>Indian Spitz</h3>
+                        <p>Hardy and low-maintenance, these dogs are excellent for guard duties and hunting.</p>
+                        <span class="price">₹5,000 – ₹15,000</span>
+                        <a href="breeds/Indianspitz.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Images\mydog1.jpg.jfif" class="card-img">
+                    <div class="card-content">
+                        <h3>Indian pariah dog</h3>
+                        <p>Hardy and low-maintenance, these dogs are excellent for guard duties and hunting.</p>
+                        <span class="price">FREE – ₹5,000</span>
+                        <a href="breeds/Indianpariah.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.cdn.newsbytesapp.com/images/l47520231220100357.jpeg" class="card-img">
+                    <div class="card-content">
+                        <h3>Mudhol hound</h3>
+                        <p>Hardy and low-maintenance, these dogs are excellent for guard duties and hunting.</p>
+                        <span class="price">₹15,000 – ₹35,000</span>
+                        <a href="breeds/Mudholhound.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://cdn.shopify.com/s/files/1/0582/8349/1478/files/steptodown.com873870.jpg?v=1750937356" class="card-img">
+                    <div class="card-content">
+                        <h3>Bakharwal dog</h3>
+                        <p>Hardy and low-maintenance, these dogs are excellent for guard duties and hunting.</p>
+                        <span class="price">₹15,000 – ₹30,000</span>
+                        <a href="breeds/Bakharwal.html" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="breed-container">
+            <h2>International Breeds</h2><br>
+            <div class="breed-grid">
+                <div class="card">
+                    <img src="https://res.cloudinary.com/embark/images/w_1436,h_1077,c_scale/f_auto,q_auto/v1648678783/embarkvet.com/uploads/embark-german-shepherd-guide-featured-image_52158be916/embark-german-shepherd-guide-featured-image_52158be916.jpg?_i=AA" class="card-img">
+                    <div class="card-content">
+                        <h3>German Shepherd</h3>
+                        <p>Intelligent, capable, and working dogs. Their devotion is unmatched.</p>
+                        <span class="price">₹18,000 – ₹65,000</span>
+                        <a href="breeds/German Shepherd.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://t3.ftcdn.net/jpg/03/13/69/24/360_F_313692438_3ZCPZqlCazXoiMa8vDzqJdj39R8D5Tty.jpg" alt="Golden Retriever" class="card-img">
+                    <div class="card-content">
+                        <h3>Golden Retriever</h3>
+                        <p>Friendly, reliable, and trustworthy. The ultimate family companion.</p>
+                        <span class="price">₹30,000 – ₹80,000</span>
+                        <a href="breeds/Golden Retriever.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://t3.ftcdn.net/jpg/02/77/07/14/360_F_277071498_dWLfRH9M3Dd8EF3udv3WC56LPM9AyZQR.jpg" alt="Bulldog" class="card-img">
+                    <div class="card-content">
+                        <h3>Bulldog</h3>
+                        <p>Docile, willful, and friendly. Great for apartment living.</p>
+                        <span class="price">₹1,20,000 – ₹3,00,000</span>
+                        <a href="breeds/Bulldog.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://cdn.britannica.com/84/232784-050-1769B477/Siberian-Husky-dog.jpg" alt="Bulldog" class="card-img">
+                    <div class="card-content">
+                        <h3>Siberian Husky</h3>
+                        <p>Docile, willful, and friendly. Great for apartment living.</p>
+                        <span class="price">₹40,000 – ₹90,000</span>
+                        <a href="breeds/Siberian Husky.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://ithinkpets.com/wp-content/uploads/2024/12/Shih-Tzu-Price-in-India-Comprehensive-Guide-for-Pet-Lovers-at-ithinkpets.com-2-460x460.webp" class="card-img">
+                    <div class="card-content">
+                        <h3>Shih Tzu</h3>
+                        <p>Docile, willful, and friendly. Great for apartment living.</p>
+                        <span class="price">₹25,000 – ₹60,000</span>
+                        <a href="breeds/Shih Tzu.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://ask.woodgreen.org.uk/media/pages/images/99f12e906e-1737559438/miniature-poodle-900x900-crop.jpg" alt="Bulldog" class="card-img">
+                    <div class="card-content">
+                        <h3>Poodle</h3>
+                        <p>Docile, willful, and friendly. Great for apartment living.</p>
+                        <span class="price">₹50,000 – ₹1,50,000</span>
+                        <a href="breeds/Poodle.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://www.dogster.com/wp-content/uploads/2024/03/chocolate-labrador-dog-standing-outdoor_Anna-Darahan_Shutterstock.jpg" alt="Bulldog" class="card-img">
+                    <div class="card-content">
+                        <h3>Labrador Retriever</h3>
+                        <p>Docile, willful, and friendly. Great for apartment living.</p>
+                        <span class="price">₹20,000 – ₹55,000</span>
+                        <a href="breeds/Labrador Retriever.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://petto.com.pl/cdn/shop/articles/SEOon_Beagle_d00b048e-5fb6-44b5-87ab-0bb697a39673.png?v=1747394114" alt="Bulldog" class="card-img">
+                    <div class="card-content">
+                        <h3>Beagle</h3>
+                        <p>Docile, willful, and friendly. Great for apartment living.</p>
+                        <span class="price">₹25,000 – ₹55,000</span>
+                        <a href="breeds/Beagle.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://t3.ftcdn.net/jpg/02/82/38/92/360_F_282389200_hfk8W2DQFwWEfyJUilqHInqqshL3caUA.jpg" alt="Bulldog" class="card-img">
+                    <div class="card-content">
+                        <h3>Rottweiler</h3>
+                        <p>Docile, willful, and friendly. Great for apartment living.</p>
+                        <span class="price">₹25,000 – ₹70,000</span>
+                        <a href="breeds/Rottweiler.html" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offers">
+    <div class="offers-container">
+        <div class="section-title">
+            <h2>Our Exclusive <span>Offers</span></h2>
+            <p>We care for your pet as much as you do! Check out our latest deals.</p>
+        </div>
+
+        <div class="offer-group-title">🎁 Basic & Premium Deals</div>
+        <div class="offer-grid">
+            <div class="offer-card basic">
+                <div class="badge">Basic</div>
+                <div class="offer-icon">🏷️</div>
+                <h3>Free Collar & Name Tag</h3>
+                <p>Personalized name tag for your new furry friend.</p>
+            </div>
+            <div class="offer-card basic">
+                <div class="badge">Basic</div>
+                <div class="offer-icon">✂️</div>
+                <h3>Free Grooming</h3>
+                <p>One-time professional grooming service included.</p>
+            </div>
+            <div class="offer-card basic">
+                <div class="badge">Basic</div>
+                <div class="offer-icon">🐶</div>
+                <h3>New Pet Welcome Kit</h3>
+                <p>🦴 Free dog food (1 week starter pack)<br>
+                🧸 1 free toy<br>
+                🥣 Feeding bowl</p>
+            </div>
+            <div class="offer-card premium">
+                <div class="badge premium-badge">High Value 🔥</div>
+                <div class="offer-icon">🦴</div>
+                <h3>1 Month Free Food</h3>
+                <p>Breed-specific diet pack for the first 30 days.</p>
+            </div>
+            <div class="offer-card premium">
+                <div class="badge premium-badge">High Value 🔥</div>
+                <div class="offer-icon">💉</div>
+                <h3>Vaccination Support</h3>
+                <p>First essential vaccination covered by us.</p>
+            </div>
+            <div class="offer-card premium">
+                <div class="badge premium-badge">High Value 🔥</div>
+                <div class="offer-icon">🚚</div>
+                <h3>Free Home Delivery</h3>
+                <p>👉 Safe pet delivery to your home</p>
+            </div>
+        </div>
+
+        <div class="offer-group-title">🐾 Special Packages & Adoption</div>
+        <div class="offer-grid special-offer-grid">
+            <div class="offer-card combo">
+                <div class="badge combo-badge">Best Value 💥</div>
+                <div class="offer-icon">🛍️</div>
+                <h3>Starter Kit Bundle</h3>
+                <p>Leash + Bowl + Toy + Starter Food pack.</p>
+            </div>
+            <div class="offer-card emotional">
+                <div class="badge emotional-badge">Our Mission ❤️</div>
+                <div class="offer-icon">❤️</div>
+                <h3>Adopt & Save</h3>
+                <p>Extra discount for adopting beautiful Indian breeds.</p>
+            </div>
+            <div class="offer-card emotional">
+                <div class="badge emotional-badge">Trust ❤️</div>
+                <div class="offer-icon">🏥</div>
+                <h3>3-Month Health Check</h3>
+                <p>Free monthly checkups to ensure your puppy is growing well.</p>
+            </div>
+        </div>
+
+        <div class="marketing-strip">
+            <div class="m-card">
+                <span>⏳</span> <strong>Limited Time:</strong> Offer valid only this week!
+            </div>
+            <div class="m-card">
+                <span>🎉</span> <strong>Festival Offer:</strong> Diwali Discount – ₹2000 OFF
+            </div>
+            <div class="m-card">
+                <span>🤝</span> <strong>Referral:</strong> Refer a friend & get ₹1000 OFF
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="happy-moments">
+    <div class="section-title">
+        <h2>Happy <span>Moments</span></h2>
+        <h4>Real stories of love, trust, and happiness ❤️</h4>
+    </div>
+
+    <div class="moments-grid">
+        <div class="moment-card" data-reveal>
+            <div class="moment-media">
+                <img src="https://img.freepik.com/free-photo/smiling-man-sitting-grass-with-his-dog-labrador-park_8353-6465.jpg" alt="Bruno">
+                 <div class="moment-overlay">
+                    <div class="overlay-content">
+                        <h3>Bruno’s Happy Story 🐾</h3>
+                        <p>"Bruno has filled our home with so much laughter. He's our soulmate!"</p>
+                        <div class="moment-location">📍 Chennai</div>
+                    </div>
+                </div>
+            </div>
+            <div class="moment-footer">
+                <div class="stars">★★★★★</div>
+                <span class="pet-name">Bruno with Rahul</span>
+            </div>
+        </div>
+
+        <div class="moment-card" data-reveal>
+            <div class="moment-media">
+                <img src="https://media.istockphoto.com/id/1854558400/photo/love-to-pet.jpg?s=612x612&w=0&k=20&c=ufhfYI_iIyQNLb-AqzdRhr4SKSmd8skMribkYGHzO8I=" alt="Sheru">
+              
+                <div class="moment-overlay">
+                    <div class="overlay-content">
+                        <h4>Sheru’s Journey 🐾</h4>
+                        <p>"From a shy puppy to a brave guardian. We love him!"</p>
+                        <div class="moment-location">📍 Bangalore</div>
+                    </div>
+                </div>
+            </div>
+            <div class="moment-footer">
+                <div class="stars">★★★★★</div>
+                <span class="pet-name">Sheru with Meena</span>
+            </div>
+        </div>
+
+        <div class="moment-card" data-reveal>
+            <div class="moment-media">
+                <img src="https://media.istockphoto.com/id/1344021882/photo/portrait-of-happy-multiracial-couple-scratching-their-pet-dog-sitting-on-floor-at-home.jpg?s=612x612&w=0&k=20&c=40ickNm5BHz4qE8XPfozZrf3EkIqUjxwu5uUfQNf2Fo=" alt="Bella">
+                <div class="moment-overlay">
+                    <div class="overlay-content">
+                        <h4>Bella’s New Family 🐾</h4>
+                        <p>"She's the smartest dog we've ever met. Truly a blessing."</p>
+                        <div class="moment-location">📍 Mumbai</div>
+                    </div>
+                </div>
+            </div>
+            <div class="moment-footer">
+                <div class="stars">★★★★★</div>
+                <span class="pet-name">Bella with Arjun</span>
+            </div>
+        </div>
+
+        <div class="moment-card" data-reveal>
+            <div class="moment-media">
+                <img src="Images\chottu2.jpg.jfif" alt="Chottu">
+                <div class="moment-overlay">
+                    <div class="overlay-content">
+                        <h4>Chottu’s First Birthday 🐾</h4>
+                        <p>"Healthiest puppy ever! Paws & Love is the best."</p>
+                        <div class="moment-location">📍 Chennai</div>
+                    </div>
+                </div>
+            </div>
+            <div class="moment-footer">
+                <div class="stars">★★★★★</div>
+                <span class="pet-name">Chottu with Prema</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+    <button class="btn btn-outline story-btn">View More Stories</button>
+</div>
+</section>
+
+<section id="gallery" class="gallery-section">
+    <div class="section-title">
+        <h2>Our Pet <span>Gallery</span></h2>
+        <p>Beautiful moments, playful paws, and happy companions from Paws & Love.</p>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="https://m.media-amazon.com/images/I/61Epa01n0rL.jpg" alt="Happy dog">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Cute puppy">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800&q=80" alt="Dog portrait">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=800&q=80" alt="Playful puppy">
+        </div>
+        <div class="gallery-item">
+            <img src="https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/30/pembroke-welsh-corgi.jpg?crop=1xw:0.9997114829774957xh;center,top" alt="Pet moment">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=800&q=80" alt="Golden retriever">
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.istockphoto.com/id/636475496/photo/portrait-of-brown-puppy-with-bokeh-background.jpg?s=612x612&w=0&k=20&c=Ot63dQOYplm0kLJdlSVWbtKGwGkuZfnfdwH5ry9a6EQ=" alt="Pet moment">
+        </div>
+        <div class="gallery-item">
+            <img src="Images\Mydog5.jpg.jfif" alt="Pet moment">
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.istockphoto.com/id/1184184060/photo/cute-happy-dog-playing-with-a-stick.jpg?s=612x612&w=0&k=20&c=SEQTAh-ueme0T9JCSFK608qT6xOCAn0jBfcaCVHHbac=" alt="Pet moment">
+        </div>
+        <div class="gallery-item">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/cutest-dog-breeds-golden-retriever-1587053895.jpg?crop=0.668xw:1.00xh;0.272xw,0" alt="Pet moment">
+        </div>
+        
+        <div class="gallery-item tall">
+    <img src="https://hips.hearstapps.com/wdy.h-cdn.co/assets/17/39/cola-0247.jpg?crop=0.668xw:1.00xh;0.151xw,0" alt="My Dog">
+</div>
+
+         <div class="gallery-item">
+            <img src="https://bestforpet.com.au/wp-content/uploads/2025/07/Labrador_Retriever_1200x800.jpg" alt="Pet moment">
+        </div>
+        
+    </div>
+</section>
+<div class="btn-container">
+    <button class="btn btn-outline story-btn">View More Stories</button>
+</div>
+
+
+
+    <section class="testimonials-section">
+    <div class="section-title">
+        <h2>Client <span>Stories</span></h2>
+        <p>Heartwarming experiences from families who found their perfect companion with us.</p>
+    </div>
+
+    <div class="testi-grid">
+        <div class="testi-card featured">
+            <div class="quote-icon">“</div>
+            <div class="stars">★★★★★</div>
+            <p>
+                Bringing Bruno home was the best decision for our family. He was healthy,
+                playful, and clearly well cared for. The team guided us through food, grooming,
+                and first-week care with so much patience.
+            </p>
+            <div class="review-footer">
+                <div>
+                    <h4>Sarah Johnson</h4>
+                    <span>Golden Retriever Owner</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testi-card">
+            <div class="quote-icon">“</div>
+            <div class="stars">★★★★★</div>
+            <p>
+                The entire process felt professional and trustworthy. Our puppy settled in so
+                quickly, and the starter support made everything easier for first-time pet parents.
+            </p>
+            <div class="review-footer">
+                <div>
+                    <h4>Michael Chen</h4>
+                    <span>Labrador Parent</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testi-card">
+            <div class="quote-icon">“</div>
+            <div class="stars">★★★★★</div>
+            <p>
+                I really appreciated how honest and helpful the staff were. They helped me choose
+                a breed that matched my apartment lifestyle, and my Beagle has been pure joy ever since.
+            </p>
+            <div class="review-footer">
+                <div>
+                    <h4>Priya Sharma</h4>
+                    <span>Beagle Owner</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testi-card">
+            <div class="quote-icon">“</div>
+            <div class="stars">★★★★★</div>
+            <p>
+                Our Rajapalayam puppy arrived active, clean, and very comfortable with people.
+                You can tell Paws & Love genuinely cares about the animals, not just the sale.
+            </p>
+            <div class="review-footer">
+                <div>
+                    <h4>Arjun Nair</h4>
+                    <span>Rajapalayam Owner</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testi-card">
+            <div class="quote-icon">“</div>
+            <div class="stars">★★★★★</div>
+            <p>
+                From vaccination guidance to feeding tips, everything felt thoughtfully explained.
+                The support after purchase was the biggest surprise for us and made us trust them even more.
+            </p>
+            <div class="review-footer">
+                <div>
+                    <h4>Meena Krishnan</h4>
+                    <span>Shih Tzu Owner</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testi-card">
+            <div class="quote-icon">“</div>
+            <div class="stars">★★★★★</div>
+            <p>
+                Clean environment, friendly communication, and genuinely adorable puppies.
+                The welcome kit was a lovely touch and made the first few days much smoother.
+            </p>
+            <div class="review-footer">
+                <div>
+                    <h4>Rahul Verma</h4>
+                    <span>German Shepherd Owner</span>
+                </div>
+            </div>
+        </div>
+      
+        
+    </div>
+</section>
+
+
+   <section id="contact" class="contact-section">
+    <div class="section-title">
+        <h2>Get <span>In Touch</span></h2>
+        <p>Let us help you find the perfect companion for your home and lifestyle.</p>
+    </div>
+
+    <div class="contact-wrapper">
+        <div class="contact-info-box">
+            <div class="contact-badge">Premium Pet Guidance</div>
+            <h3>Visit Paws & Love</h3>
+            <p class="contact-intro">
+                From choosing the right breed to understanding grooming, food, and first-week care,
+                our team is here to make your pet journey smooth and joyful.
+            </p>
+
+            <div class="info-list">
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+91 98765 43210</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icon">✉️</span>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@pawslove.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <div>
+                        <h4>Location</h4>
+                        <p>24 Pet Avenue, Anna Nagar, Chennai</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icon">⏰</span>
+                    <div>
+                        <h4>Working Hours</h4>
+                        <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-actions">
+                <a href="https://wa.me/919876543210" class="contact-btn whatsapp-btn" target="_blank">WhatsApp Us</a>
+                <a href="tel:+919876543210" class="contact-btn call-btn">Call Now</a>
+            </div>
+
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <form class="contact-form" action="#">
+                <h3>Send Us a Message</h3>
+                <p>Tell us your dream breed and we’ll guide you personally.</p>
+
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Phone Number">
+                <input type="text" placeholder="Preferred Breed">
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <div class="map-box">
+                <h3>Find Us Easily</h3>
+                <iframe
+                    src="https://www.google.com/maps?q=Anna%20Nagar%20Chennai&output=embed"
+                    width="100%"
+                    height="220"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h3>Paws & Love</h3>
+            <p>
+                Bringing happy pets and loving families together with care, trust, and premium support.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="#">Home</a>
+            <a href="#breeds">Breeds</a>
+            <a href="#offers">Offers</a>
+            <a href="#happy-moments">Happy Moments</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <p>Phone: +91 98765 43210</p>
+            <p>Email: hello@pawslove.com</p>
+            <p>Anna Nagar, Chennai</p>
+        </div>
+
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Paws & Love Pet Shop. All rights reserved.</p>
+    </div>
+</footer>
+  <script src="script.js"></script>
+
+    </body>
+</html>
